@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel= "stylesheet"  type= "text/css"  href="{{url_for('static', filename= 'styles/styling.css')}}">
+    <link rel="icon" type="image/x-icon" href="{{url_for('static',filename='images/ukeu.png')}}">
+    <script defer data-domain="ukeu.adsy.me" src="https://plausible.io/js/script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <title>UK< >Eu Converter</title>
+</head>
+
+
+<body>
+<h1>UK< >EU Converter </h1>
+<h2>🇬🇧 🇪🇺</h2>
+<div id="intro">
+<p>This is a simple measurement tool to convert imperial units into metric ones & vice versa. Choose one of the converters, enter a number and pick a measurement unit.</p>
+</div>
+
+
+<!--first converter: length units-->
+<div class="unit_converter">
+<h3>Length Units 📏</h3>
+<form id="conversion_form" method="POST" action="conversion">
+    <div id="converter1">
+
+        <input type="number" id="uk_number" name="uk_number" ><br><br>
+
+        <select id="imperial" name="imperial">
+
+            <option value="inches">inch(es)</option>
+            <option value="feet">foot/feet</option>
+            <option value="yards">yard(s)</option>
+            <option value="miles">mile(s)</option>
+
+        </select>
+        <br><br>
+
+        <input type="number" id="eu_number" name="eu_number"><br><br>
+
+        <select id="metric" name="metric">
+
+            <option value="cm">cm</option>
+            <option value="m">m</option>
+            <option value="km">km</option>
+
+        </select>
+        </div>
+
+    <div id="btndiv">
+    <button onclick="updateConversion()" type="button">Convert</button>
+        <br>
+    <button onclick="clearFields()" type="button" id="clear">Clear values</button>
+    </div>
+
+    </form>
+
+</div>
+
+<!--second converter: volume units-->
+
+<div class="unit_converter">
+
+<h3>Volume Units 🍺</h3>
+<form id="conversion_form2" method="POST" action="conversion2">
+    <div id="converter2">
+
+        <input type="number" id="uk_number2" name="uk_number2"><br><br>
+
+        <select id="imperial2" name="imperial2">
+
+            <option value="ounce">ounce(s)</option>
+            <option value="pint">pint(s)</option>
+            <option value="gallon">gallon(s)</option>
+
+        </select><br><br>
+
+        <input type="number" id="eu_number2" name="eu_number2"><br><br>
+
+        <select id="metric2" name="metric2">
+
+            <option value="ml">ml</option>
+            <option value="l">l</option>
+
+
+        </select>
+        </div>
+    <div id="btndiv">
+    <button onclick="updateConversion2()" type="button">Convert</button>
+        <br>
+    <button onclick="clearFields2()" type="button" id="clear">Clear values</button>
+    </div>
+
+    </form>
+
+    </div>
+
+<!--third converter: area units-->
+
+<div class="unit_converter">
+
+<h3>Area Units 📐</h3>
+<form id="conversion_form3" method="POST" action="conversion3">
+    <div id="converter3">
+
+        <input type="number" id="uk_number3" name="uk_number3"><br><br>
+
+        <select id="imperial3" name="imperial3">
+
+            <option value="sqfoot">sq.🦶️</option>
+            <option value="rood">rood(s)</option>
+            <option value="acre">acre(s)</option>
+
+        </select><br><br>
+
+        <input type="number" id="eu_number3" name="eu_number3"><br><br>
+
+        <select id="metric3" name="metric3">
+
+            <option value="sqm">sq.m</option>
+            <option value="hectare">ha</option>
+
+
+        </select>
+        </div>
+    <div id="btndiv">
+    <button onclick="updateConversion3()" type="button">Convert</button>
+        <br>
+    <button onclick="clearFields3()" type="button" id="clear">Clear values</button>
+    </div>
+
+    </form>
+
+    </div>
+
+<!--fourth converter: weight units-->
+
+<div class="unit_converter">
+
+<h3>Weight Units ⚖️</h3>
+<form id="conversion_form4" method="POST" action="conversion4">
+    <div id="converter4">
+
+        <input type="number" id="uk_number4" name="uk_number4"><br><br>
+
+        <select id="imperial4" name="imperial4">
+
+            <option value="ounce">ounce(s)</option>
+            <option value="pound">pound(s)</option>
+            <option value="stone">stone(s)</option>
+
+        </select><br><br>
+
+        <input type="number" id="eu_number4" name="eu_number4"><br><br>
+
+        <select id="metric4" name="metric4">
+
+            <option value="g">g</option>
+            <option value="kg">kg</option>
+
+        </select>
+        </div>
+    <div id="btndiv">
+    <button onclick="updateConversion4()" type="button">Convert</button>
+        <br>
+    <button onclick="clearFields4()" type="button" id="clear">Clear values</button>
+    </div>
+
+    </form>
+
+    </div>
+
+<!--footer-->
+
+<div id="promo">
+    <p>This little app was coded with ❤️️ & ☕️ in pure html | js | css<br><br><a href="https://callmefred.com">© 2023 - callmefred.com</a> </p>
+</div>
+
+<script src="{{url_for('static', filename='js/main.js')}}"></script>
+</body>
+</html>
+
